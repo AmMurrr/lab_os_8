@@ -1,0 +1,231 @@
+artem@artem-SVF1521D1RW:~/lab_os/lab_os_4/build$ strace ./run
+execve("./run", ["./run"], 0x7fffa3247290 /* 75 vars */) = 0
+brk(NULL)                               = 0x558ade11b000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffd7f24f7d0) = -1 EINVAL (Недопустимый аргумент)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ff54077b000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (Нет такого файла или каталога)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=60583, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 60583, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7ff54076c000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\244;\374\204(\337f#\315I\214\234\f\256\271\32"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2260560, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff540400000
+mmap(0x7ff540428000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7ff540428000
+mmap(0x7ff5405bd000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7ff5405bd000
+mmap(0x7ff540615000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x214000) = 0x7ff540615000
+mmap(0x7ff54061b000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7ff54061b000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ff540769000
+arch_prctl(ARCH_SET_FS, 0x7ff540769740) = 0
+set_tid_address(0x7ff540769a10)         = 8115
+set_robust_list(0x7ff540769a20, 24)     = 0
+rseq(0x7ff54076a0e0, 0x20, 0, 0x53053053) = 0
+mprotect(0x7ff540615000, 16384, PROT_READ) = 0
+mprotect(0x558add224000, 4096, PROT_READ) = 0
+mprotect(0x7ff5407b5000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7ff54076c000, 60583)           = 0
+newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+getrandom("\x3d\x0b\x02\xa9\x9f\x23\xfa\xbf", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x558ade11b000
+brk(0x558ade13c000)                     = 0x558ade13c000
+write(1, "0 - change realisation(default 1"..., 340 - change realisation(default 1)
+) = 34
+write(1, "1 - find E\n", 111 - find E
+)            = 11
+write(1, "2 - transition from decimal\n", 282 - transition from decimal
+) = 28
+write(1, "3 - Exit programm\n", 183 - Exit programm
+)     = 18
+openat(AT_FDCWD, "/home/artem/lab_os/lab_os_4/build/libimp1.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0775, st_size=18208, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16440, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff540776000
+mmap(0x7ff540777000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7ff540777000
+mmap(0x7ff540778000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7ff540778000
+mmap(0x7ff540779000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7ff540779000
+close(3)                                = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=60583, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 60583, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7ff54075a000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff540673000
+mmap(0x7ff540681000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7ff540681000
+mmap(0x7ff5406fd000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x7ff5406fd000
+mmap(0x7ff540758000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x7ff540758000
+close(3)                                = 0
+mprotect(0x7ff540758000, 4096, PROT_READ) = 0
+mprotect(0x7ff540779000, 4096, PROT_READ) = 0
+munmap(0x7ff54075a000, 60583)           = 0
+newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+read(0, 1
+"1\n", 1024)                    = 2
+write(1, "-------------------\n", 20-------------------
+)   = 20
+write(1, "Input int x\n", 12Input int x
+)           = 12
+read(0, 13
+"13\n", 1024)                   = 3
+write(1, "E is 2.620603\n", 14E is 2.620603
+)         = 14
+write(1, "-------------------\n", 20-------------------
+)   = 20
+read(0, 0
+"0\n", 1024)                    = 2
+munmap(0x7ff540776000, 16440)           = 0
+munmap(0x7ff540673000, 942344)          = 0
+openat(AT_FDCWD, "/home/artem/lab_os/lab_os_4/build/libimp2.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0775, st_size=18592, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16440, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff540776000
+mmap(0x7ff540777000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7ff540777000
+mmap(0x7ff540778000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7ff540778000
+mmap(0x7ff540779000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7ff540779000
+close(3)                                = 0
+mprotect(0x7ff540779000, 4096, PROT_READ) = 0
+write(1, "Switched implemetation to 2\n", 28Switched implemetation to 2
+) = 28
+read(0, 2
+"2\n", 1024)                    = 2
+write(1, "-------------------\n", 20-------------------
+)   = 20
+write(1, "Input decimal number\n", 21Input decimal number
+)  = 21
+read(0, 44
+"44\n", 1024)                   = 3
+write(1, "Your number is 1122\n", 20Your number is 1122
+)   = 20
+write(1, "-------------------\n", 20-------------------
+)   = 20
+read(0, 3
+"3\n", 1024)                    = 2
+munmap(0x7ff540776000, 16440)           = 0
+lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Недопустимая операция смещения)
+exit_group(0)                           = ?
++++ exited with 0 +++
+artem@artem-SVF1521D1RW:~/lab_os/lab_os_4/build$ strace ./run
+execve("./run", ["./run"], 0x7ffe45195bd0 /* 75 vars */) = 0
+brk(NULL)                               = 0x55596f73d000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7fff4dd2c450) = -1 EINVAL (Недопустимый аргумент)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1044b6b000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (Нет такого файла или каталога)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=60583, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 60583, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f1044b5c000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\244;\374\204(\337f#\315I\214\234\f\256\271\32"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2260560, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1044800000
+mmap(0x7f1044828000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f1044828000
+mmap(0x7f10449bd000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f10449bd000
+mmap(0x7f1044a15000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x214000) = 0x7f1044a15000
+mmap(0x7f1044a1b000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1044a1b000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1044b59000
+arch_prctl(ARCH_SET_FS, 0x7f1044b59740) = 0
+set_tid_address(0x7f1044b59a10)         = 8352
+set_robust_list(0x7f1044b59a20, 24)     = 0
+rseq(0x7f1044b5a0e0, 0x20, 0, 0x53053053) = 0
+mprotect(0x7f1044a15000, 16384, PROT_READ) = 0
+mprotect(0x55596e4f7000, 4096, PROT_READ) = 0
+mprotect(0x7f1044ba5000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7f1044b5c000, 60583)           = 0
+newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+getrandom("\x05\x97\x58\xfb\xd3\x91\x27\xf7", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x55596f73d000
+brk(0x55596f75e000)                     = 0x55596f75e000
+write(1, "0 - change realisation(default 1"..., 340 - change realisation(default 1)
+) = 34
+write(1, "1 - find E\n", 111 - find E
+)            = 11
+write(1, "2 - transition from decimal\n", 282 - transition from decimal
+) = 28
+write(1, "3 - Exit programm\n", 183 - Exit programm
+)     = 18
+openat(AT_FDCWD, "/home/artem/lab_os/lab_os_4/build/libimp1.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0775, st_size=18208, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16440, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1044b66000
+mmap(0x7f1044b67000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f1044b67000
+mmap(0x7f1044b68000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f1044b68000
+mmap(0x7f1044b69000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f1044b69000
+close(3)                                = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=60583, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 60583, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f1044b4a000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1044a63000
+mmap(0x7f1044a71000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7f1044a71000
+mmap(0x7f1044aed000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x7f1044aed000
+mmap(0x7f1044b48000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x7f1044b48000
+close(3)                                = 0
+mprotect(0x7f1044b48000, 4096, PROT_READ) = 0
+mprotect(0x7f1044b69000, 4096, PROT_READ) = 0
+munmap(0x7f1044b4a000, 60583)           = 0
+newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+read(0, 0
+"0\n", 1024)                    = 2
+munmap(0x7f1044b66000, 16440)           = 0
+munmap(0x7f1044a63000, 942344)          = 0
+openat(AT_FDCWD, "/home/artem/lab_os/lab_os_4/build/libimp2.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0775, st_size=18592, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16440, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1044b66000
+mmap(0x7f1044b67000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f1044b67000
+mmap(0x7f1044b68000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f1044b68000
+mmap(0x7f1044b69000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f1044b69000
+close(3)                                = 0
+mprotect(0x7f1044b69000, 4096, PROT_READ) = 0
+write(1, "Switched implemetation to 2\n", 28Switched implemetation to 2
+) = 28
+read(0, 0
+"0\n", 1024)                    = 2
+munmap(0x7f1044b66000, 16440)           = 0
+munmap(0x7f1044a63000, 942344)          = 0
+openat(AT_FDCWD, "/home/artem/lab_os/lab_os_4/build/libimp2.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0775, st_size=18592, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16440, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1044b66000
+mmap(0x7f1044b67000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f1044b67000
+mmap(0x7f1044b68000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f1044b68000
+mmap(0x7f1044b69000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f1044b69000
+close(3)                                = 0
+mprotect(0x7f1044b69000, 4096, PROT_READ) = 0
+write(1, "Switched implemetation to 2\n", 28Switched implemetation to 2
+) = 28
+read(0, 1
+"1\n", 1024)                    = 2
+write(1, "-------------------\n", 20-------------------
+)   = 20
+write(1, "Input int x\n", 12Input int x
+)           = 12
+read(0, 3 
+"3\n", 1024)                    = 2
+write(1, "E is 2.666667\n", 14E is 2.666667
+)         = 14
+write(1, "-------------------\n", 20-------------------
+)   = 20
+read(0, 3
+"3\n", 1024)                    = 2
+munmap(0x7f1044b66000, 16440)           = 0
+lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Недопустимая операция смещения)
+exit_group(0)                           = ?
++++ exited with 0 +++
